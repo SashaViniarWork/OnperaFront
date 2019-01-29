@@ -1,0 +1,47 @@
+<header>
+  <div class="container-fluid sosial">
+    <div class="row sosial-media-row">
+      <div class="col-lg-12 sosial-media">
+        <ul>
+          <li><a href="" class="ico-facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="" class="ico-twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="" class="ico-linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="" class="ico-youtube"><i class="fab fa-youtube"></i></a></li>
+          <li><a href="" class="ico-instagram"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid navigate-panel ">
+    <div class="row">
+      <div class="col-lg-auto col-sm-10 col-10 logo-block">
+        <div class="container-fluid">
+          <div class="row full-h">
+            <div class="col-2 logo-img">
+              <img src="../../../assets/images/favicon.ico" alt="fovicon">
+            </div>
+            <div class="col-10 logo-text">
+              <p>OnPeraTechnologies</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col ml-auto navigate-bar {{closeStyle}}" id="navbarNav" >
+        <ul>
+          <li><a [routerLink]="['main']">Home</a></li>
+          <li><a [routerLink]="['services']">Services</a></li>
+          <li><a [routerLink]="['company']">Company</a></li>
+          <li><a [routerLink]="['contact']">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-2 burger-btn">
+        <button class="" type="button" (click)="onBurgerClick()">
+          <i class="fas fa-bars" *ngIf="!show"></i>
+          <i class="fas fa-times" *ngIf="show"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</header>
