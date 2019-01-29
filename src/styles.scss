@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+html body {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+app-root {
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  width: 100%;
+}
+
+
