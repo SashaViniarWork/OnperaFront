@@ -1,0 +1,40 @@
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.carousel-caption {
+  left: 0;
+  top: 50%;
+  width: 100%;
+  z-index: 20;
+  padding: 3em;
+  color: #fff;
+  max-width: 50rem;
+  position: absolute;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.list ul li:before {
+  content: '';
+  width: 0;
+  height: 0;
+  display: inline-block;
+  border-left: 0.5em solid #f7931e;
+  border-top: .25em solid transparent;
+  border-bottom: .25em solid transparent;
+  position: absolute;
+  top: 0.65em;
+  bottom: auto;
+  left: 0.7em;
+  right: auto;
+}

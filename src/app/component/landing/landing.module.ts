@@ -8,11 +8,12 @@ import {HeaderComponent} from '../../shared/header/header.component';
 import { ServicesComponent } from './services/services.component';
 import { CompanyComponent } from './company/company.component';
 import { ContactComponent } from './contact/contact.component';
-
+import { OwlModule } from 'ngx-owl-carousel';
 @NgModule({
   declarations: [LandingComponent, MainComponent, HeaderComponent, ServicesComponent, CompanyComponent, ContactComponent],
   imports: [
     CommonModule,
+    OwlModule,
     LandingRoutingModule
   ]
 })
