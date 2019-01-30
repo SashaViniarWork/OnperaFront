@@ -1,47 +1,16 @@
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li *ngFor="let item of slider" [ngClass]="{'active': item.isDataSlide}"
+        data-target="#carouselExampleIndicators" attr.data-slide-to="{{item.index}}"></li>
   </ol>
   <div class="carousel-inner" role="listbox">
     <!-- Slide One - Set the background image for this slide in the line below -->
-    <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080')">
+    <div class="carousel-item" *ngFor="let item of slider" [ngClass]="{'active': item.isDataSlide}"
+         [ngStyle]="{'background-image': ' url(' + item.imgUrl + ')'}">
       <div class="carousel-caption d-none d-md-block">
-        <h2 class="display-4">About Company</h2>
-        <p class="lead"> Onpera Technologies is a professional services company that offers a rich pallet of solutions designed for increased
-          business productivity and efficiency. We developed our solutions according to your business needs and with the
-          end-users in mind. Our services portfolio is not what makes us different. What makes us different is who we are
-          and how we provide the services to our clients.</p>
-      </div>
-    </div>
-    <!-- Slide Two - Set the background image for this slide in the line below -->
-    <div class="carousel-item" style="background-image: url('https://source.unsplash.com/bF2vsubyHcQ/1920x1080')">
-      <div class="carousel-caption d-none d-md-block">
-        <h2 class="display-4">Our Services</h2>
-        <p class="lead">Starting as early as you have an idea, we work with you to analyze, build, design, and release a final product to market.
-          We’re focused on understanding your users’ needs, validating hypotheses quickly, reducing risks, and continually improving
-          our processes to ensure highly efficient and fluid product development life cycle.</p>
-      </div>
-    </div>
-    <!-- Slide Three - Set the background image for this slide in the line below -->
-    <div class="carousel-item" style="background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080')">
-      <div class="carousel-caption d-none d-md-block">
-        <h2 class="display-4">Our Teams</h2>
-        <ul>
-          <li>Java Developers</li>
-          <li>Front-End Team</li>
-          <li>QA Engineers</li>
-        </ul>
-        <p class="lead">This is a description for the third slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item" style="background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080')">
-      <div class="carousel-caption d-none d-md-block">
-        <h2 class="display-4">Contact Us</h2>
-
-        <p class="lead">Contact Us</p>
+        <h2 class="display-4">{{item.headerText}}</h2>
+        <p class="lead">{{item.text}}</p>
+        <a class="slider-button">About Us</a>
       </div>
     </div>
   </div>
