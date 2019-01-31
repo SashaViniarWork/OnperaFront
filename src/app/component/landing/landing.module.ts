@@ -9,8 +9,10 @@ import { ServicesComponent } from './services/services.component';
 import { CompanyComponent } from './company/company.component';
 import { ContactComponent } from './contact/contact.component';
 import { OwlModule } from 'ngx-owl-carousel';
+import { AboutComponent } from './about/about.component';
+import { TeamComponent } from './team/team.component';
 @NgModule({
-  declarations: [LandingComponent, MainComponent, HeaderComponent, ServicesComponent, CompanyComponent, ContactComponent],
+  declarations: [LandingComponent, MainComponent, HeaderComponent, ServicesComponent, CompanyComponent, ContactComponent, AboutComponent, TeamComponent],
   imports: [
     CommonModule,
     OwlModule,

@@ -10,7 +10,7 @@
       <div class="carousel-caption d-none d-md-block">
         <h2 class="display-4">{{item.headerText}}</h2>
         <p class="lead">{{item.text}}</p>
-        <a class="slider-button">About Us</a>
+        <a class="slider-button" (click)="navigate(item.link)">Navigate</a>
       </div>
     </div>
   </div>

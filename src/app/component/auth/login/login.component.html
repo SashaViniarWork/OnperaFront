@@ -1,15 +1,15 @@
 <div class="container">
   <div class="row ">
-    <form class="w-100">
+    <form class="w-100" [formGroup]="loginForm">
       <div class="form-group">
         <label>User email</label>
-        <input type="text" class="form-control" placeholder="User E-mail">
+        <input type="text" class="form-control" formControlName="email" placeholder="User E-mail">
       </div>
       <div class="form-group">
         <label>Password</label>
-        <input type="password" class="form-control" placeholder="Password">
+        <input type="password" class="form-control" formControlName="password" placeholder="Password">
       </div>
-      <button (click)="navToAdmin()" class="btn btn-outline-secondary">Submit</button>
+      <button (click)="navToAdmin(loginForm.value)" class="btn btn-outline-secondary">Submit</button>
       <a class="btn btn-outline-secondary ml-1" (click)="navToRegistration()">Registration</a>
     </form>
   </div>

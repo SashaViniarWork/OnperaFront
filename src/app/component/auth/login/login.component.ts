@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {ApiService} from '../../../shared/services/api.service';
+import {FormBuilder, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,8 +9,13 @@ import {Router} from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  constructor(public router: Router) { }
+  public loginForm: any;
+  constructor(public router: Router, public api: ApiService,  private fb: FormBuilder) {
+    this.loginForm = fb.group({
+      'email': new FormControl(null, [Validators.required]),
+      'password': new FormControl(null, [Validators.required])
+    });
+  }
 
   ngOnInit() {
   }
@@ -16,7 +23,10 @@ export class LoginComponent implements OnInit {
    this.router.navigate(['auth/registration']);
   }
 
-  navToAdmin() {
-    this.router.navigate(['admin/main']);
+  navToAdmin(val) {
+    this.api.post('api/login', val).subscribe(res => {
+      console.log(res);
+    });
+    // this.router.navigate(['admin/main']);
   }
 }

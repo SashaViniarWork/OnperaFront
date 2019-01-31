@@ -5,6 +5,8 @@ import {LandingComponent} from './landing.component';
 import {ServicesComponent} from './services/services.component';
 import {ContactComponent} from './contact/contact.component';
 import {CompanyComponent} from './company/company.component';
+import {AboutComponent} from './about/about.component';
+import {TeamComponent} from './team/team.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,14 @@ const routes: Routes = [
         path: 'company',
         component: CompanyComponent
       },
+      {
+        path: 'about',
+        component: AboutComponent
+      },
+      {
+        path: 'team',
+        component: TeamComponent
+      }
     ]
   }
 ];

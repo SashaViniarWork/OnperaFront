@@ -1,12 +1,11 @@
 import {Injectable} from '@angular/core';
-import 'rxjs/add/operator/map';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
 
 @Injectable()
 export class ApiService {
 
-  baseUrl = '';
+  baseUrl = 'https://localhost:3000/';
   constructor(private http: HttpClient) {
   }
 

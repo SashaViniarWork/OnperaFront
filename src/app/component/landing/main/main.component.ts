@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -9,13 +10,14 @@ export class MainComponent implements OnInit {
 
   slider: any[];
 
-  constructor() {
+  constructor(public router: Router) {
     this.slider = [
       {
         isDataSlide: true,
         imgUrl: 'https://source.unsplash.com/LAaSoL0LrYs/1920x1080',
         headerText: 'About Company',
         index: '0',
+        link: 'about',
         text: 'Onpera Technologies is a professional services company that offers a rich pallet of solutions designed for increased\n' +
           '          business productivity and efficiency. We developed our solutions according to your business needs and with the\n' +
           '          end-users in mind. Our services portfolio is not what makes us different. What makes us different is who we are\n' +
@@ -35,6 +37,7 @@ export class MainComponent implements OnInit {
         index: '2',
         imgUrl: 'https://source.unsplash.com/szFUQoyvrxM/1920x1080',
         headerText: 'Our Teams',
+        link: 'team',
         text: ' <ul>\n' +
           '          <li>Java Developers</li>\n' +
           '          <li>Front-End Team</li>\n' +
@@ -53,6 +56,10 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  navigate(url) {
+    this.router.navigate(['landing/' + url]);
   }
 
 }
